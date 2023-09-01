@@ -17,14 +17,13 @@ namespace UnitTest.Feature.Produto
             IProdutoRepository produtoRepository,
             IFactoryIntegration factoryIntegration,
             ILogger<ProdutoService> logger,
-            IMediator mediator,
-            RequestState requestState)
+            IMediator mediator
+            )
         {
             _produtoRepository = produtoRepository;
             _factoryIntegration = factoryIntegration;
             _logger = logger;
-            _mediator = mediator;
-            this.requestState = requestState;
+            _mediator = mediator;            
         }
 
         public Unit RegistraPedidoProduto(Produto produto, CancellationToken cancellationToken)
