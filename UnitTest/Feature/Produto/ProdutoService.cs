@@ -32,6 +32,7 @@ namespace UnitTest.Feature.Produto
             {
                 _logger.LogInformation("Requisição cancelada com sucesso.");
                 requestState = RequestState.NotSupported;
+                _mediator.Send(requestState);
                 return Unit.Value;
             }
 
@@ -75,7 +76,7 @@ namespace UnitTest.Feature.Produto
                 requestState= RequestState.NotSupported;
                 _mediator.Send(requestState);
                 return Unit.Value;
-            }
+            }            
         }
     }
 }
