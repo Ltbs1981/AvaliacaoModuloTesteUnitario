@@ -41,6 +41,7 @@ namespace UnitTest.Feature.Produto
                 _logger.LogError("Produto inválido");
                 _logger.LogError(produto.ValidationResult.Errors.ToString());
                 requestState = RequestState.NotSupported;
+                _mediator.Send(requestState);
                 throw new InvalidOperationException();
             }
 
