@@ -17,7 +17,7 @@ namespace UnitTest.Feature.Produto
         public Produto
             (
                 string nome, 
-                int sku, 
+                string sku, 
                 DateTime fabricacao,
                 DateTime validade, 
                 Categoria categoria, 
